@@ -41,10 +41,10 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string
 
         fmt.Printf("SimpleChaincode::Init() - Entry")
         fmt.Printf("SimpleChaincode::Init() - function = %s",function)
-        fmt.Printf("SimpleChaincode::Init() - arg[0] = %s",arg[0])
-        fmt.Printf("SimpleChaincode::Init() - arg[1] = %s",arg[1])
-        fmt.Printf("SimpleChaincode::Init() - arg[2] = %s",arg[2])
-        fmt.Printf("SimpleChaincode::Init() - arg[3] = %s",arg[3])
+        fmt.Printf("SimpleChaincode::Init() - args[0] = %s",args[0])
+        fmt.Printf("SimpleChaincode::Init() - args[1] = %s",args[1])
+        fmt.Printf("SimpleChaincode::Init() - args[2] = %s",args[2])
+        fmt.Printf("SimpleChaincode::Init() - args[3] = %s",args[3])
 
 	if len(args) != 4 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 4")
