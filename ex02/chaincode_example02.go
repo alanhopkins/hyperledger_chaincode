@@ -74,7 +74,7 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string
 		return nil, err
 	}
 
-        fmt.Printf("SimpleChaincode::Init() - Exit")
+        fmt.Printf("AJHSimpleChaincode::Init() - Exit")
 
 	return nil, nil
 }
