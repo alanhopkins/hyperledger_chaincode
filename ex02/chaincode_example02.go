@@ -39,6 +39,13 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string
 	var Aval, Bval int // Asset holdings
 	var err error
 
+        fmt.Printf("SimpleChaincode::Init() - Entry")
+        fmt.Printf("SimpleChaincode::Init() - function = %s",function)
+        fmt.Printf("SimpleChaincode::Init() - arg[0] = %s",arg[0])
+        fmt.Printf("SimpleChaincode::Init() - arg[1] = %s",arg[1])
+        fmt.Printf("SimpleChaincode::Init() - arg[2] = %s",arg[2])
+        fmt.Printf("SimpleChaincode::Init() - arg[3] = %s",arg[3])
+
 	if len(args) != 4 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 4")
 	}
@@ -66,6 +73,8 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string
 	if err != nil {
 		return nil, err
 	}
+
+        fmt.Printf("SimpleChaincode::Init() - Exit")
 
 	return nil, nil
 }
