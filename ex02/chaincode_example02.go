@@ -39,12 +39,12 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string
 	var Aval, Bval int // Asset holdings
 	var err error
 
-        fmt.Printf("SimpleChaincode::Init() - Entry")
-        fmt.Printf("SimpleChaincode::Init() - function = %s",function)
-        fmt.Printf("SimpleChaincode::Init() - args[0] = %s",args[0])
-        fmt.Printf("SimpleChaincode::Init() - args[1] = %s",args[1])
-        fmt.Printf("SimpleChaincode::Init() - args[2] = %s",args[2])
-        fmt.Printf("SimpleChaincode::Init() - args[3] = %s",args[3])
+        fmt.Println("SimpleChaincode::Init() - Entry")
+        fmt.Println("SimpleChaincode::Init() - function = ",function)
+        fmt.Println("SimpleChaincode::Init() - args[0] = ",args[0])
+        fmt.Println("SimpleChaincode::Init() - args[1] = ",args[1])
+        fmt.Println("SimpleChaincode::Init() - args[2] = ",args[2])
+        fmt.Println("SimpleChaincode::Init() - args[3] = ",args[3])
 
 	if len(args) != 4 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 4")
@@ -74,7 +74,7 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface, function string
 		return nil, err
 	}
 
-        fmt.Printf("AJHSimpleChaincode::Init() - Exit")
+        fmt.Println("AJHSimpleChaincode::Init() - Exit")
 
 	return nil, nil
 }
